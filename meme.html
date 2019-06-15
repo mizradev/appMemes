@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MemeSocial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Meme</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">instagram</a></li>
+                    <li><a href="#">twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="row">
+            <div class="col s12 m3 grey lighten-4">
+                <!-- Grey navigation panel -->
+                <form class="col s12">
+                  <h4>Agregar tú meme!</h4>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input  id="meme-nombre" type="text" class="validate">
+                            <label for="first_name">Titulo del meme</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input type="text" id="meme-url" class="validate">
+                            <label for="last_name">URL del imagen</label>
+                          </div>
+                        </div>
+                        
+                </form>
+                <button class="waves-effect waves-light btn" onclick="addPost()">Agregar meme</button>
+                <button class="waves-effect waves-light btn" onclick="getMemes()">Obtener memes de API</button>
+              </div>
+            <div class="col s12 m9 center-align">
+                <!-- Teal page content  -->
+                <div class="container" id="wrap">
+                  <div class="row" id="posts">
+                  </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./meme.js"></script>
+</body>
+</html>
